@@ -18,9 +18,9 @@ RUN rpmdb --rebuilddb && yum install -y \
     echo "[Prepare]"
 
 RUN cd /tmp && \
-    wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz && \
-    tar xfz Python-3.7.2.tgz && \
-    cd Python-3.7.2 && \
+    wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && \
+    tar xfz Python-3.6.8.tgz && \
+    cd Python-3.6.8 && \
     ./configure --prefix=/usr/local && \
     make && \
     make altinstall && \
