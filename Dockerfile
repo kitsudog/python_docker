@@ -41,6 +41,8 @@ RUN cd /tmp && \
 # zeroc-ice
 RUN wget https://zeroc.com/download/Ice/3.7/el7/zeroc-ice3.7.repo -O /etc/yum.repos.d/zeroc-ice3.7.repo && rpmdb --rebuilddb && yum install -y gcc-c++ ice-all-runtime ice-all-devel && yum clean all && pip3.6 install zeroc-ice --trusted-host mirrors.aliyun.com -i http://mirrors.aliyun.com/pypi/simple
 
+RUN pip3.6 install pipenv
+
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
